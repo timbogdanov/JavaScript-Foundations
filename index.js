@@ -51,7 +51,7 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
-function mortgageCalculatorWithPams(principal, interestRate, years) {
+function mortgageCalculatorWithParams(principal, interestRate, years) {
 
     let monthlyInterestRate = interestRate / 12;
     let periods = years * 12;
@@ -63,7 +63,7 @@ function mortgageCalculatorWithPams(principal, interestRate, years) {
 
 }
 
-console.log(mortgageCalculatorWithPams(200000, 0.05, 30));
+console.log(mortgageCalculatorWithParams(200000, 0.05, 30));
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 (a credit score).
@@ -133,7 +133,11 @@ function variableInterestRate(principal, interestRate, years) {
     return principal * numerator / denominator;
 }
 
-console.log(variableInterestRate(200000, 0.04, 30));
+let amountToPay = window.prompt('principle balance:');
+let interestToPay = window.prompt('interest rate:');
+let yearsToPay = window.prompt('years to pay off');
+
+console.log(variableInterestRate(amountToPay, interestToPay, yearsToPay));
 
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
@@ -150,3 +154,4 @@ console.log(variableInterestRate(200000, 0.04, 30));
 
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
+
